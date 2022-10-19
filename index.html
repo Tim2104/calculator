@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <title>Calculator</title>
+</head>
+<body>  
+  <div id="page" class="site">
+    <section id="calculator">
+      <div class="container">
+        <h2 class="ttl">Заполните форму на бесплатный 
+        <br>выезд замерщика и получите скидку</h2>
+      <div class="wr">
+        <div class="cal-1">
+          <div class="ttl-cal">
+            Калькулятор стоимости скинали
+          </div>
+        <div class="line1">
+          <div class="label-cal">
+            <label class="ttll" for>1-я панель</label>
+          </div>
+          <span class="nn">
+            <input class="num"  id="num" type="number" value="0" name=""> 
+            x
+            <input class="num" id="num2" type="number" value="0" name="">
+            см
+          </span>
+        </div>
+        <div class="line1">
+          <div class="label-cal">
+            <label class="ttll" for>2-я панель</label>
+          </div>
+          <span class="nn">
+            <input class="num" id="num3"  type="number" value="0" name=""> 
+            x
+            <input class="num" id="num4"  type="number" value="0" name=""> 
+            см  
+          </span>
+          <div class="btn-cal" id="add">Добавить</div>
+        </div>
+        <div id="parentId"></div>
+        <div class="line2">
+          <div class="label-cal">
+            <label class="ttll" for>Тип стекла</label>
+          </div>
+          <select class="cal-v"  id="type">
+            <option value="0">Необычное</option>
+            <option value="20">Обычное</option>
+          </select>
+        </div>
+        <div class="line3">
+          <div class="label-cal">
+            <label class="ttll" for="is_html">УФ-печать</label>
+          </div>
+          <input type="checkbox"  value="50" id="is_html">
+        </div>
+        <div class="line2">
+          <div class="label-cal">
+            <label class="ttll" for>Подсветка</label>
+          </div>
+          <select class="cal-v" id="type2">
+            <option value="0">Нет</option>
+            <option value="45">Да</option>
+          </select>
+        </div>
+        <div class="line4">
+          <div class="label-cal">
+            <label class="ttll" for>Вырез под розетку</label>
+          </div>
+            <input  id="num5" type="number" name=" " class="num" value="0">шт
+        </div>
+        <div class="line4">
+          <div class="label-cal">
+            <label class="ttll" for>Отверстия</label>
+          </div>
+            <input  id="num6" type="number" name=" " class="num" value="0">шт
+        </div>
+        <div class="line4">
+          <div class="label-cal">
+            <label class="ttll" for>Расстояние за город</label>
+          </div>
+            <input  id="num7" type="number" name=" " class="num" value="0">км
+          </div>
+        </div>
+          
+          
+        <div class= "cal-2">
+          <div class="ttl2">
+            Подробный расчет
+          </div>
+          <div class="cal-line">
+            <span class="line-label">Замер</span>
+            <span class="num-line2">Бесплатно</span>
+          </div>
+          <div class="cal-line">
+            <span class="line-label">Изделие</span>
+                  <span class="byn">&nbsp;руб</span>
+            <span id="res2" class="num-line">0</span>
+          </div>
+          <div class="cal-line">
+            <span class="line-label">Подсветка</span>
+                  <span class="byn">&nbsp;руб</span>
+            <span id="res" class="num-line">0</span>
+          </div>
+          <div class="cal-line">
+            <span class="line-label">Доставка</span>
+            <span class="num-line2">Бесплатно</span>
+          </div>
+          <div class="cal-line">
+            <span class="line-label">Монтаж</span>
+                  <span class="byn">&nbsp;руб</span>
+            <span id="res3" class="num-line">0</span>
+          </div>
+          <hr>
+          <div class="cal-line">
+            <span class="line-label">Итого</span>
+            <span class="byn2">&nbsp;руб</span>
+            <span class="byn2" id="result">0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+<script src="js/main.js"></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        document.getElementById("add").onclick = function() {
+            addQuestion();
+        }
+    });
+      
+</script>
+
+</body>
+</html>
